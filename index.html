@@ -401,7 +401,35 @@
             font-size: 0.85rem;
             flex-shrink: 0;
         }
+        /* ===== About Tags (个人特质标签) ===== */
+        .about-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
 
+        .about-tag {
+            font-size: 0.85rem;
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            background: linear-gradient(135deg, var(--rose-gold-pale) 0%, #faf7f2 100%);
+            color: var(--rose-gold);
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            border: 1px solid rgba(196, 149, 106, 0.15);
+            transition: all var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .about-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(196, 149, 106, 0.15);
+            background: linear-gradient(135deg, var(--rose-gold-pale) 0%, #f0e4d8 100%);
+        }
         /* ===== Education ===== */
         .education {
             background: var(--warm-white);
@@ -1175,12 +1203,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-text">
+                                <div class="about-text">
                     <h3>你好，我是俞丁悦 👋</h3>
-                    <p>
-                        来自浙江义乌，2026年考入浙江大学工科试验班（智能科学与创新）。
-                        正在努力成为一名能够用AI帮助人们创造便利、改变生活的人。
-                    </p>
+                    
+                    <!-- 个人特质标签区 -->
+                    <div class="about-tags">
+                        <span class="about-tag">🧠 MBTI: ENFP</span>
+                        <span class="about-tag">✨ 有很多idea想要付诸实践！</span>
+                        <span class="about-tag">🎤 喜欢参与策划活动（高中阶段参与的有：班主任节、教师节视频、辩论赛）</span>
+                        <span class="about-tag">🤝 喜欢和人打交道，喜欢倾听也喜欢表达</span>
+                    </div>
+
+                    <!-- 原有的客观信息网格 -->
                     <div class="about-meta">
                         <div class="about-meta-item">
                             <div class="about-meta-icon">🏫</div>
@@ -1200,10 +1234,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ===== Education ===== -->
     <section class="education" id="education">
         <div class="section-inner">
